@@ -8,7 +8,7 @@ class Bankaccount{
         string name;
         int number;
         string type;
-        long double balance;
+        double balance;
     public:
         void customerDetails(string name, int number, string type, double balance){
             this->name = name;
@@ -24,7 +24,7 @@ class Bankaccount{
             cout << "balance: " << x << endl;
         }
 
-        void deposit(long double amount){
+        void deposit(double amount){
             if(amount > 0){
                 this->balance += amount;
                 cout << "Deposit successful. New balance: " << this->balance << endl;
@@ -32,7 +32,7 @@ class Bankaccount{
                 cout << "Invalid deposit amount." << endl;
             }
         }
-        void withdraw(long double amount){
+        void withdraw(double amount){
             if(amount > 0 && amount <= this->balance){
                 this->balance -= amount;
                 cout << "Withdrawal successful. New balance: " << this->balance << endl;
